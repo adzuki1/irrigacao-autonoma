@@ -10,6 +10,8 @@
 #define RELAY_PIN 8
 
 void setup() {
+  Serial.begin(9600);
+
   // pino relé como saída
   pinMode(RELAY_PIN, OUTPUT);
 
@@ -30,14 +32,21 @@ void loop() {
   // 3. limiar para irrigação
   int threshold = 45; // irrigar se limiar <= 45%
 
+  Serial.print("Leitura bruta: " + sensor_data + '\n');
+  Serial.print("Umidade: "+ moisture + '\n');
+  Serial.print("Limiar: " + threshold + '\n');
+  Serial.print("Estado relé: ");
+
   // 4. condicional
   if(moisture <= threshold){
     digitalWrite(RELAY_PIN, HIGH);
+    Serial.print("LIGADO" + '\n');
   }
   else{
     digitalWrite(RELAY_PIN, LOW);
+    Serial.print("DESLIGADO" + '\n');
   }
 
   // 5. delay de leitura
-  delay(1000);
+  delay(5000);
 }
