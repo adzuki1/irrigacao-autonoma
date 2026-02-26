@@ -2,7 +2,7 @@
 
 Este projeto, desenvolvido em colaboração com os alunos da 1ª série do Ensino Médio da Escola Parque, visa trazer uma alternativa sustentável à irrigação de plantas, baseando-se nos níveis de umidade do solo em que a planta se encontra. Foi desenvolvido para a plataforma **Arduino Uno**.
 
-[Anexar foto]
+![rega-autonoma](https://github.com/user-attachments/assets/a10e7772-fc6d-487c-8326-2ea36e528673)
 
 ## Configurações de Hardware
 
